@@ -1,0 +1,15 @@
+name: Texlive Full en debian
+description: Accion para github que ejecuta el contenedor Texlive Full
+author: Maxi Aguirre
+inputs:
+  run:
+    required: true
+runs:
+  using: docker
+  image: docker://ghcr.io/HookMaxi/texlive-full-debian:master
+  entrypoint: /bin/bash
+  args:
+    - -eo
+    - pipefail
+    - -c
+    - ${{ inputs.run }}
