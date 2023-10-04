@@ -6,7 +6,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://HookMaxi/texlive-full-debian:master
+  image: docker://ghcr.io/hookmaxi/docker-texlive-full:latest
   entrypoint: /bin/bash
   args:
     - -eo
